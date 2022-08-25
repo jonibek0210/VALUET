@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./scss/style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div class="wrapper__container">
+      <aside>
+         <div>
+            <div class="block_logo">
+               <img src="./assets/logo/logo.svg">
+            </div>
+            <div class="block_tabs">
+               <a href="#" class="tab">
+                  <img src="./assets/icons/Overview.svg">
+                  <span>Overview</span>
+               </a>
+               <a href="#" class="tab">
+                  <img src="./assets/icons/Wallets.svg">
+                  <span>Wallets</span>
+               </a>
+               <a href="#" class="tab">
+                  <img src="./assets/icons/Transictions.svg">
+                  <span>Transictions</span>
+               </a>
+               <a href="#" class="tab">
+                  <img src="./assets/icons/Exchange.svg">
+                  <span>Exchange</span>
+               </a>
+               <a href="#" class="tab">
+                  <img src="./assets/icons/market.svg">
+                  <span>market</span>
+               </a>
+            </div>
+         </div>
+
+         <div class="block_log_out">
+            <div class="log_out">
+               <img src="./assets/icons/circle.svg">
+               <span>Mike Jakson</span>
+            </div>
+            <div class="log_out">
+               <img src="./assets/icons/log out.svg">
+               <span>Log out</span>
+            </div>
+         </div>
+      </aside>
+      <main>
+         <header>
+            <div class="header_left">
+               <div class="burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <input type="text">
+               <img src="./assets/icons/search.svg">
+            </div>
+            <div class="header_right">
+               <img src="./assets/icons/folder.svg">
+               <img src="./assets/icons/Bell.svg">
+            </div>
+         </header>
+         <div class="content">
+            <div class="content_name between">
+               <div>
+                  <span>Overview</span><span class="data">25 october, Sunday</span>
+               </div>
+               <div>
+                  <button>Add widget</button>
+               </div>
+            </div>
+
+            <div class="block_statistics">
+               <div class="statistics">
+                  <div class="block_doughnut">
+                     <span class="text_balance">Balance</span>
+                     <div class="doughnut">
+                        <canvas id="myChart"></canvas>
+                     </div>
+                     <div class="balance">
+                        <div class="ethereum flex">
+                           <div>
+                              <img src="./assets/icons/circle_white.svg">
+                              <span>Ethereum</span>
+                           </div>
+                           <span>18%</span>
+                        </div>
+                        <div class="bitcoin flex">
+                           <div>
+                              <img src="./assets/icons/circle_blue.1.svg">
+                              <span>Bitcoin</span>
+                           </div>
+                           <span>64%</span>
+                        </div>
+                        <div class="dash flex">
+                           <div>
+                              <img src="./assets/icons/circle_yellow.2.svg">
+                              <span>Dash</span>
+                           </div>
+                           <span>18%</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="block_line">
+                     <div class="between">
+                        <span>Spending</span>
+                        <select>
+                           <option>January</option>
+                        </select>
+                     </div>
+                     <div class="money">
+                        <span>$ 5,743.35</span>
+                        <span>total spending</span>
+                     </div>
+                     <div class="line">
+                        <canvas id="myChart2"></canvas>
+                     </div>
+                  </div>
+               </div>
+               <div class="cards">
+                  <div class="card">
+                     <span>BitCoin</span>
+                     <div class="flex">
+                        <div class="block_money">
+                           <img src="./assets/image/Bitcoin.svg">
+                           <div class="monay">
+                              <span>600 BTC</span>
+                              <span>$30,000,000</span>
+                           </div>
+                        </div>
+                        <div class="card_statistics">
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <span>BitCoin</span>
+                     <div class="flex">
+                        <div class="block_money">
+                           <img src="./assets/image/Bitcoin.svg">
+                           <div class="monay">
+                              <span>600 BTC</span>
+                              <span>$30,000,000</span>
+                           </div>
+                        </div>
+                        <div class="card_statistics">
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <span>BitCoin</span>
+                     <div class="flex">
+                        <div class="block_money">
+                           <img src="./assets/image/Bitcoin.svg">
+                           <div class="monay">
+                              <span>600 BTC</span>
+                              <span>$30,000,000</span>
+                           </div>
+                        </div>
+                        <div class="card_statistics">
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <span>BitCoin</span>
+                     <div class="flex">
+                        <div class="block_money">
+                           <img src="./assets/image/Bitcoin.svg">
+                           <div class="monay">
+                              <span>600 BTC</span>
+                              <span>$30,000,000</span>
+                           </div>
+                        </div>
+                        <div class="card_statistics">
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                           <div class="card_statistic">
+                              <img src="./assets/icons/statistic.svg">
+                              <div>
+                                 <span>$1 200= 0,074 grc</span>
+                                 <span>1 grc = $6 542, 35</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="news">
+               <div class="block_line2">
+                  <div class="line">
+                     <canvas id="myChart3"></canvas>
+                  </div>
+               </div>
+               <div class="recent_news">
+                  <div class="text">
+                     recent news
+                  </div>
+                  <div class="new">
+                     <span>19 hours ago </span>
+                     <span>SEC Fails to Show Court Blockvest Tokens Are
+                        Securities</span>
+                  </div>
+                  <div class="new">
+                     <span>19 hours ago </span>
+                     <span>SEC Fails to Show Court Blockvest Tokens Are
+                        Securities</span>
+                  </div>
+                  <div class="new">
+                     <span>19 hours ago </span>
+                     <span>SEC Fails to Show Court Blockvest Tokens Are
+                        Securities</span>
+                  </div>
+                  <div class="new">
+                     <span>19 hours ago </span>
+                     <span>SEC Fails to Show Court Blockvest Tokens Are
+                        Securities</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="./js/chart.js"></script>
+   <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,51 +1,59 @@
-const select = document.querySelectorAll('.currency');
-const btn = document.getElementById('btn');
-const num = document.getElementById('num');
-const ans = document.getElementById('ans');
+let API_KEY = "CfvepEI6IyaW7fyYYTDEssqLf1vM2EvX"
 
-fetch('https://api.frankfurter.app/currencies')
-   .then((data) => data.json())
-   .then((data) => {
-      display(data);
-   });
+let inp1 = document.querySelector('#inp1')
+let inp2 = document.querySelector('#inp2')
+let dataList = document.querySelector('#currency')
+let dataList2 = document.querySelector('#currency2')
 
-fetch('https://api.frankfurter.app/currencies')
-   .then((data) => data.json())
-   .then((data) => {
-      display(data);
-   });
+let currency1 = "USD"
+let currency2 = "UZS"
+let amount1 = 0
+let amount2 = 0
 
+let rates = []
 
-function display(data) {
-   const entries = Object.entries(data);
-   console.log(entries.length)
-   for (let i = 0; i < entries.length; i++) {
-      select[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`;
+axios.get(`https://api.apilayer.com/fixer/latest?base=USD&apikey=${API_KEY}`)
+   .then(res => {
+      if (res.status === 200 || res.status === 201) {
+         rates = res.data.rates
 
-      select[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`;
+         startExchanging(Object.keys(rates), dataList)
+         startExchanging(Object.keys(rates), dataList2)
+         console.log('start');
+      }
+   })
 
+function startExchanging(currencies, select) {
+   for (let currency of currencies) {
+      let opt = new Option(currency, currency)
+
+      select.append(opt)
    }
-}
-
-btn.onclick = () => {
-   let currency1 = select[0].value;
-   let currency2 = select[1].value;
-   let value = num.value;
-   if (currency1 != currency2) {
-      convert(currency1, currency2, value);
-   } else {
-      alert("Choose Diffrent Currency");
+   dataList.onchange = () => {
+      currency1 = dataList.value
+      console.log(currency1);
    }
-}
+   dataList2.onchange = () => {
+      currency2 = dataList2.value
+      console.log(currency2);
+   }
+   inp1.onkeyup = () => {
+      amount1 = inp1.value
+   }
+   inp2.onkeyup = () => {
+      amount2 = inp2.value
+   }
+   exchange.onclick = () => {
+      if (inp1.value.length > 0 && inp2.value.length > 0) {
+         amount2 = amount1 * rates[currency2] / rates[currency1]
+         amount1 = amount1
+         inp2.value = amount2
+      }
 
-function convert(currency1, currency2, value) {
-   const host = 'api.frankfurter.app';
-   fetch(`https://${host}/latest?amount=${value}&from=${currency1}&to=${currency2}`)
-      .then((val) => val.json())
-      .then((val) => {
-         console.log(Object.values(val.rates)[0]);
-         ans.value = Object.values(val.rates)[0]
-      })
+      amount2 = amount1 * rates[currency2] / rates[currency1]
+      amount1 = amount1
+      inp2.value = amount2
+   }
 }
 
 let burger = document.querySelector('.burger')
@@ -56,17 +64,17 @@ let clous = document.querySelector('.clous')
 burger.onclick = () => {
    aside.style.left = '0'
    modal_bg.style.display = 'block'
-   
+
    setTimeout(() => {
       modal_bg.style.opacity = "1"
-  }, 400);
+   }, 400);
 }
 
 clous.onclick = () => {
    aside.style.left = '-100%'
    modal_bg.style.opacity = "0"
-   
+
    setTimeout(() => {
       modal_bg.style.display = 'none'
-  }, 400);
+   }, 400);
 }

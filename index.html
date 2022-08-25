@@ -68,7 +68,7 @@
             <div class="header_right">
                <img src="./assets/icons/folder.svg">
                <img src="./assets/icons/Bell.svg">
-            </div>
+            </div>   
          </header>
          <div class="content">
             <div class="content_name">
@@ -77,20 +77,24 @@
             <div class="block_flex">
                <div class="block_valuet">
                   <div class="flex">
-                     <select id="" class="currency"></select>
+                     <select id="currency" class="currency">
+                        <option value="">none</option>
+                     </select>
                      <img src="./assets/image/Bitcoin.svg">
                   </div>
                   <div>
-                     <input type="text" id="num">
+                     <input type="text" id="inp1">
                   </div>
                </div>
                <div class="block_valuet">
                   <div class="flex">
-                     <select id="" class="currency"></select>
+                     <select id="currency2" class="currency">
+                        <option value="">none</option>
+                     </select>
                      <img src="./assets/image/Bitcoin.svg">
-                  </div>
+                  </div>   
                   <div>
-                     <input type="text" id="ans">
+                     <input type="text" id="inp2">
                   </div>
                </div>
             </div>
@@ -106,7 +110,7 @@
                </div>
             </div>
             <div class="block_btn">
-               <button id="btn">exchange</button>
+               <button id="exchange" class="btn">exchange</button>
             </div>
          </div>
       </main>
@@ -115,7 +119,7 @@
    <div class="modal_bg">
       <img class="clous" src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/33/9.12-128.png">
    </div>
-
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="./js/script.js"></script>
 </body>
 
